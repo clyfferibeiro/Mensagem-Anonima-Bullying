@@ -20,7 +20,7 @@ st.markdown("""
 **Escreva a mensagem no campo abaixo e clique em enviar.**
 """)
 
-mensagem = st.text_area('Digite sua mensagem')
+mensagem = st.text_area('Digite sua mensagem', height=200)
 
 # # Taking inputs
 # email_sender = st.text_input('From', 'clyffe.ribeiro@escolajayme.com', disabled=True)
@@ -74,5 +74,8 @@ if st.button("Enviar"):
     try:
         enviar_email(mensagem)
         st.success('Mensagem Enviada Com Sucesso! 🚀')
+        with st.container():
+            st.write("**Mensagem enviada:**")
+            st.write(mensagem)
     except:
         st.error(f"Failed to send email: {e}")
