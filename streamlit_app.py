@@ -55,6 +55,6 @@ if st.button("Enviar"):
         st.success(f'Mensagem Enviada Com Sucesso! 🚀')
         st.write("**Mensagem enviada:**")
         with st.container(border=True):            
-            st.write(f'**{mensagem}**')
+            st.write(mensagem)
     except:
         st.error(f"Erro no envio da mensagem!")
