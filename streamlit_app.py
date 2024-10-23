@@ -45,7 +45,7 @@ def enviar_email(mensagem):
     s.starttls()
     # Login Credentials for sending the mail
     s.login(msg['From'], password)
-    s.sendmail(msg['From'], ["clyffe.assis@gmail.com", "clyffe.ribeiro@escolajayme.com"], msg.as_string().encode('utf-8'))
+    s.sendmail(msg['From'], ["clyffe.assis@gmail.com", "clyffe.ribeiro@escolajayme.com", "mensagem_anonima_bullying@escolajayme.com", "denise.xavier@escolajayme.com"], msg.as_string().encode('utf-8'))
     
 
 
