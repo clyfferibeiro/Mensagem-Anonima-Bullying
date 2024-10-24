@@ -25,13 +25,6 @@ st.markdown('---')
 
 #st.image("logo.png")
 
-st.info("""
-✍️ **Escreva a mensagem no campo abaixo e clique em enviar.**
-""")
-
-mensagem = st.text_area('**Digite sua mensagem:**', height=200,  key='widget')
-
-
 def enviar_email(mensagem):  
     corpo_email = mensagem
 
@@ -50,7 +43,12 @@ def enviar_email(mensagem):
     s.login(msg['From'], password)
     s.sendmail(msg['From'], ["clyffe.assis@gmail.com", "clyffe.ribeiro@escolajayme.com", "mensagem_anonima_bullying@escolajayme.com", "denise.xavier@escolajayme.com"], msg.as_string().encode('utf-8'))
     
+st.info("""
+✍️ **Escreva a mensagem no campo abaixo e clique em enviar.**
+""")
 
+with st.container(border=True):  
+    mensagem = st.text_area('**Digite sua mensagem:**', height=200,  key='widget')
 
 if st.button("Enviar"):
     try:
