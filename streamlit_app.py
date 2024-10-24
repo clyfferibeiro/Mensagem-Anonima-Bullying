@@ -31,7 +31,7 @@ def enviar_email(mensagem):
     msg = email.message.Message()
     msg['Subject'] = "Nova Mensagem Anônima - Antibullying"
     msg['From'] = 'mensagem_anonima_bullying@escolajayme.com'
-    recipients = ["clyffe.assis@gmail.com", "clyffe.ribeiro@escolajayme.com"]
+    recipients = ["clyffe.ribeiro@escolajayme.com"]
     msg['To'] = ",".join(recipients)
     password = 'ncmkfwsfzjgvkdkm' 
     msg.add_header('Content-Type', 'text/html')
