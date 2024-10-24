@@ -21,6 +21,7 @@ def clear_text():
     st.session_state.widget = ""
 
 st.title('Enviar Mensagem Anônima 💌 🚀')
+st.markdown('---')
 
 #st.image("logo.png")
 
