@@ -14,7 +14,7 @@ from email.mime.text import MIMEText
 import smtplib
 import email.message
 
-st.set_page_config(page_title="App Mensagem Anônima", page_icon="💌")
+st.set_page_config(page_title="App Mensagem Anônima", page_icon="📋")
 
 def clear_text():
     st.session_state.my_text = st.session_state.widget
