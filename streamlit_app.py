@@ -41,7 +41,7 @@ def enviar_email(mensagem):
     s.starttls()
     # Login Credentials for sending the mail
     s.login(msg['From'], password)
-    s.sendmail(msg['From'], ["clyffe.assis@gmail.com", "clyffe.ribeiro@escolajayme.com", "mensagem_anonima_bullying@escolajayme.com", "denise.xavier@escolajayme.com"], msg.as_string().encode('utf-8'))
+    s.sendmail(msg['From'], ["clyffe.ribeiro@escolajayme.com"], msg.as_string().encode('utf-8'))
     
 st.info("""
 ✍️ **Escreva a mensagem no campo abaixo e clique em enviar.**
@@ -50,12 +50,12 @@ st.info("""
 with st.container(border=True):  
     mensagem = st.text_area('**Digite sua mensagem:**', height=200,  key='widget')
 
-if st.button("Enviar"):
-    try:
-        enviar_email(mensagem)
-        st.success(f'Mensagem Enviada Com Sucesso! 🚀')
-        st.write("**Mensagem enviada:**")
-        with st.container(border=True):            
-            st.write(mensagem)
-    except:
-        st.error(f"Erro no envio da mensagem!")
+    if st.button("Enviar"):
+        try:
+            enviar_email(mensagem)
+            st.success(f'Mensagem Enviada Com Sucesso! 🚀')
+            st.write("**Mensagem enviada:**")
+            with st.container(border=True):            
+                st.write(mensagem)
+        except:
+            st.error(f"Erro no envio da mensagem!")
