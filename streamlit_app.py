@@ -24,7 +24,7 @@ st.title('Enviar Mensagem Anônima 💌 🚀')
 
 #st.image("logo.png")
 
-st.markdown("""
+st.info("""
 ✍️ **Escreva a mensagem no campo abaixo e clique em enviar.**
 """)
 
