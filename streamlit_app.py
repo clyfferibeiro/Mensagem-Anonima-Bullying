@@ -25,7 +25,7 @@ st.title('Enviar Mensagem Anônima 💌 🚀')
 #st.image("logo.png")
 
 st.markdown("""
-**Escreva a mensagem no campo abaixo e clique em enviar.**
+✍️ **Escreva a mensagem no campo abaixo e clique em enviar.**
 """)
 
 mensagem = st.text_area('**Digite sua mensagem:**', height=200,  key='widget')
